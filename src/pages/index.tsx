@@ -3,9 +3,26 @@ import Image from "next/image";
 // import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Layout from "../components/layout";
+import Map from "../components/map";
 
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return <Layout main={<div>Home</div>} />;
+  return (
+    <Layout
+      main={
+        <div className="flex">
+          <div
+            className="w-1/2 pb-4"
+            style={{ maxHeight: "calc(100vh - 64px)", overflowX: "scroll" }}
+          >
+            Places list
+          </div>
+          <div className="w-1/2 pb-4">
+            <Map />
+          </div>
+        </div>
+      }
+    />
+  );
 }
