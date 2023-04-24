@@ -13,7 +13,7 @@ interface IProps {
 }
 
 export default function Map({}: IProps) {
-  const mapRef = useRef<ReactMapGL | null>(null);
+  // const mapRef = useRef<ReactMapGL | null>(null);
   const [viewState, setViewState] = React.useState({
     longitude: 13.38,
     latitude: 49.75,
@@ -30,7 +30,7 @@ export default function Map({}: IProps) {
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN}
         onMove={(evt) => setViewState(evt.viewState)}
         mapStyle="mapbox://styles/admiam/clg0vs5n8000401mp2f1izi7q"
-        ref={(instance) => (mapRef.current = instance)}
+        // ref={(instance) => (mapRef.current = instance)}
         maxZoom={15}
       ></ReactMapGL>
     </div>

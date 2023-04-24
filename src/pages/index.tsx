@@ -13,13 +13,13 @@ export default function Home() {
       main={
         <div className="flex">
           <div
-            className="w-1/2 pb-4"
+            className="w-1/4 pb-4"
             style={{ maxHeight: "calc(100vh - 64px)", overflowX: "scroll" }}
           >
             Places list
           </div>
-          <div className="w-1/2 pb-4">
-            <Map />
+          <div className="w-3/4 pb-4">
+            <Map ReactMapGL={undefined} />
           </div>
         </div>
       }

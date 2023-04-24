@@ -57,6 +57,13 @@ export default function PlaceForm({}: IProps) {
             setValue("longitude", longitude);
           }}
           defaultValue=""
+          onSelectAdress={function (
+            address: string,
+            latitude: number | null,
+            longitude: number | null
+          ): void {
+            throw new Error("Function not implemented.");
+          }}
         />
         {/* {errors.address && <p>{errors.address.message}</p>} */}
         {/* <h2>{address}</h2> */}

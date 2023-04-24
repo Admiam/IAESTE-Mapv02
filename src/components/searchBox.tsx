@@ -4,6 +4,8 @@ import usePlacesAutocomplete, {
   getGeocode,
   getLatLng,
 } from "use-places-autocomplete";
+import { useGoogleMapsScript, Libraries } from "use-google-maps-script";
+
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import {
   Combobox,
@@ -43,6 +45,13 @@ export function SearchBox({ onSelectAddress, defaultValue }: ISearchBoxProps) {
     <ReadySearchBox
       onSelectAddress={onSelectAddress}
       defaultValue={defaultValue}
+      onSelectAdress={function (
+        address: string,
+        latitude: number | null,
+        longitude: number | null
+      ): void {
+        throw new Error("Function not implemented.");
+      }}
     />
   );
 }
