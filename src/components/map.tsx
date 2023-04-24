@@ -8,14 +8,16 @@ import React from "react";
 // import { HousesQuery_houses } from "src/generated/HousesQuery";
 // import { SearchBox } from "./searchBox";
 
-interface IProps {}
+interface IProps {
+  ReactMapGL: any;
+}
 
 export default function Map({}: IProps) {
-  //   const mapRef = useRef<ReactMapGL | null>(null);
+  const mapRef = useRef<ReactMapGL | null>(null);
   const [viewState, setViewState] = React.useState({
-    longitude: -100,
-    latitude: 40,
-    zoom: 3.5,
+    longitude: 13.38,
+    latitude: 49.75,
+    zoom: 10,
   });
   return (
     <div
@@ -28,6 +30,8 @@ export default function Map({}: IProps) {
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN}
         onMove={(evt) => setViewState(evt.viewState)}
         mapStyle="mapbox://styles/admiam/clg0vs5n8000401mp2f1izi7q"
+        ref={(instance) => (mapRef.current = instance)}
+        maxZoom={15}
       ></ReactMapGL>
     </div>
   );

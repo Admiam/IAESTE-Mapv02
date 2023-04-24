@@ -26,7 +26,7 @@ const Layout: FunctionComponent<IProps> = ({ main }) => {
             </Link>
             {authenticated ? (
               <>
-                <Link href="/places/add">Add place</Link>
+                <Link href="/add">Add place</Link>
                 <button onClick={logout}>Logout</button>
               </>
             ) : (
