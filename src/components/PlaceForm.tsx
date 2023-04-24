@@ -41,11 +41,11 @@ export default function PlaceForm({}: IProps) {
       className="mx-auto, w-1/2 py-4 text-center"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <h1 className="text-xl">Add a New house</h1>
+      <h1 className="text-xl">Add a New place</h1>
       <div className="mt-4">
-        <label htmlFor="search" className="block">
+        {/* <label htmlFor="search" className="block">
           Search for your address
-        </label>
+        </label> */}
         <SearchBox
           onSelectAddress={(
             address: any,
