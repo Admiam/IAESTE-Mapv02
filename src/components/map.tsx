@@ -15,9 +15,10 @@ interface IProps {
 export default function Map({}: IProps) {
   // const mapRef = useRef<ReactMapGL | null>(null);
   const [viewState, setViewState] = React.useState({
-    longitude: 13.38,
-    latitude: 49.75,
+    longitude: 14.4,
+    latitude: 35.89,
     zoom: 10,
+    // 35.8905346,14.4016387
   });
   return (
     <div
